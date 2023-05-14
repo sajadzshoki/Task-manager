@@ -30,7 +30,7 @@ const Sidebar = () => {
       </Link>
 
       {categories.map((category) => (
-        // functinal is open bg color 
+        // functional bg color isOpen  
         <button
           className={`text-white my-2 pl-5 flex gap-5 items-center  w-full rounded-xl py-4
           ${
