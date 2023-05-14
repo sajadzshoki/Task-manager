@@ -3,7 +3,7 @@ import { FiSearch } from "react-icons/fi";
 import profile from "../assets/profile.png";
 const Navbar = () => {
   return (
-    <div className="flex justify-between items-center w-full mb-4 border-b-2 pb-3">
+    <div className="flex justify-between items-center w-full mb-4 border-b-2 pb-3 sticky top-0 bg-sky-50 p-4 ">
       {/* functinal  */}
       <h1 className="text-3xl font-semibold">Dashboard</h1>
 
