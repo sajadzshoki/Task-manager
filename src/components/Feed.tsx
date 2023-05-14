@@ -1,8 +1,13 @@
-import React from 'react'
+import Dashboard from './Dashboard'
+import Navbar from './Navbar'
 
 const Feed = () => {
+  
   return (
-    <div>Feed</div>
+    <div className='bg-sky-50 flex-auto rounded-xl duration-75 p-4'>
+      <Navbar/>
+      <Dashboard/>
+      </div>
   )
 }
 

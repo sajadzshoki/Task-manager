@@ -2,6 +2,7 @@ import {
   // useEffect,
   useState,
 } from "react";
+import { Link } from "react-router-dom";
 import { categories } from "../utils/constant";
 import { AiOutlineMenu } from "react-icons/ai";
 const Sidebar = () => {
@@ -9,7 +10,7 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`w-60 h-[98%] flex flex-col items-start bg-gradient-to-t from-blue-800 to-blue-600 rounded-xl shadow-xl relative duration-75 m-2 ${
+      className={`w-60 h-full flex flex-col items-start bg-gradient-to-t from-blue-800 to-blue-600 rounded-xl shadow-xl relative duration-75 ${
         isOpen ? "right-0" : "right-[14.9rem]"
       }`}
     >
@@ -24,12 +25,19 @@ const Sidebar = () => {
         <AiOutlineMenu size="1.5em" color="" />
       </button>
 
-      <a href="">
+      <Link to="/">
         <h1 className="text-2xl font-bold  text-white p-5">Task Manager</h1>
-      </a>
+      </Link>
+
       {categories.map((category) => (
         <button
-          className="text-white my-2 pl-5 flex gap-5 items-center  w-full rounded-xl py-4 hover:bg-blue-900"
+          className={`text-white my-2 pl-5 flex gap-5 items-center  w-full rounded-xl py-4
+          ${
+            category.name !== "Logout"
+              ? "hover:bg-blue-900"
+              : "hover:bg-red-700"
+          }
+          `}
           key={category.name}
           onClick={() => {}}
         >
