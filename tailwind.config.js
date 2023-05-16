@@ -3,6 +3,10 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      gridTemplateColumns: {
+        
+        'dashboard': 'repeat(auto-fit, minmax(300px, 1fr))'
+        },
       colors: {
         blue: {
           1: "#31507d",

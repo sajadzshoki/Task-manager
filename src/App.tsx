@@ -1,22 +1,20 @@
 import { Routes, Route } from "react-router-dom";
 import { Feed, Sidebar } from "./components";
-// import  { useState } from 'react'
 
+import { ContextProvider } from "./context/AppContext";
 
 const App = () => {
-  // const [selectedCategory,setSelectedCategory] = useState<string>("Dashboard");
   return (
-    <div className="h-screen flex flex-row py-3 px-4 gap-5">
-      <Sidebar 
-      // setSelectedCategory={setSelectedCategory}
-      // selectedCategory={selectedCategory}      
+    <ContextProvider>
+      <div className="h-screen flex flex-row gap-5 py-3 px-4">
+        <Sidebar
+        />
 
-      />
-
-      <Routes>
-        <Route path="/" element={<Feed />} />
-      </Routes>
-    </div>
+        <Routes>
+          <Route path="/" element={<Feed />} />
+        </Routes>
+      </div>
+    </ContextProvider>
   );
 };
 

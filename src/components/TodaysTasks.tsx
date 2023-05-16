@@ -51,10 +51,10 @@ const TodaysTasks = () => {
             Consequuntur
           </p>
           <button className="absolute right-2 bottom-2">
-            <MdDelete size="1.3em" className="hover:text-red-600" />
+            <MdDelete size="1.3em" className="hover:text-red-600 active:scale-95" />
           </button>
           <button className="absolute right-10 bottom-2">
-            <MdDone size="1.3em" className="hover:text-green-400" />
+            <MdDone size="1.3em" className="hover:text-green-400 active:scale-95" />
           </button>
         </div>
         <button

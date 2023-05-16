@@ -1,7 +1,7 @@
 import Sidebar from "./Sidebar";
 import Feed from "./Feed";
 import Dashboard from "./Dashboard";
-import Todo from "./Todo";
+import Todo from "./TodoList";
 import Finance from "./Finance";
 import Navbar from "./Navbar";
 
