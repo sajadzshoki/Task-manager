@@ -1,8 +1,13 @@
-import  { useState } from "react";
+
+import React, { useContext } from "react";
 import { nanoid } from "nanoid";
-const TodoList = () => {
-  const [noteText, setNoteText] = useState("");
-  const [notes, setNotes] = useState([
+import NotesList from "./Notes/NoteList";
+import { StateContext } from "../context/AppContext";
+
+
+function TodoList() {
+  // const stateContext = useContext(StateContext);
+  const [notes, setNotes] = React.useState([
     {
       id: nanoid(),
       text: "this is the first note",
@@ -14,14 +19,20 @@ const TodoList = () => {
       date: "14/11/2022",
     },
   ]);
-  const characterLimit = 200;
 
-  const handleLimit = (event: any) => {
-    if (characterLimit - event.target.value.length >= 0) {
-      setNoteText(event.target.value);
-    }
-  };
-  const addNote = (text: string) => {
+  // React.useEffect(() => {
+  //   const savedNotes = JSON.parse(localStorage.getItem("react-notes-app-data"));
+  
+
+  //   if (savedNotes) {
+  //     setNotes(savedNotes);
+  //   }
+  // }, []);
+  // React.useEffect(() => {
+  //   localStorage.setItem("react-notes-app-data", JSON.stringify(notes));
+  // }, [notes]);
+
+  const addNote = (text:any) => {
     const date = new Date();
     const newNote = {
       id: nanoid(),
@@ -32,33 +43,24 @@ const TodoList = () => {
     const newNotes = [...notes, newNote];
     setNotes(newNotes);
   };
-  const handleSaveClick = () => {
-    if (noteText.trim().length > 0) {
-      setNoteText("");
-      addNote(noteText);
-    }
+  const deleteNote = (id:string) => {
+    const newNotes = notes.filter((note) => note.id !== id);
+    setNotes(newNotes);
   };
+
   return (
-    <div className="p-4 bg-slate-200 grid grid-cols-dashboard">
-      <div className="w-[14rem] h-[15rem] relative">
-        <textarea
-          value={noteText}
-          onChange={handleLimit}
-          placeholder="Add Note . . . "
-          className="resize-none bg-green-300 w-[14rem] h-[15rem] rounded-lg p-3 border-none outline-none"
-        />
-        <small className="absolute bottom-3 left-3">
-          {characterLimit - noteText.length} Remaining
-        </small>
-        <button
-          className="bg-sky-300 hover:bg-blue-400 absolute bottom-2 right-3 px-3 py-1 rounded-full text-sm"
-          onClick={handleSaveClick}
-        >
-          Save
-        </button>
-      </div>
+    
+    <div className="p-4">
+   
+      <NotesList
+        notes={notes}
+        handleAddNote={addNote}
+        handleDeleteNote={deleteNote}
+      />
     </div>
+   
   );
-};
+}
 
 export default TodoList;
+

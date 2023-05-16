@@ -1,17 +1,18 @@
 import { Routes, Route } from "react-router-dom";
-import { Feed, Sidebar } from "./components";
+
 
 import { ContextProvider } from "./context/AppContext";
+import Login from './pages/Login'
+import Home from "./pages/Home";
 
 const App = () => {
   return (
     <ContextProvider>
       <div className="h-screen flex flex-row gap-5 py-3 px-4">
-        <Sidebar
-        />
-
+      
         <Routes>
-          <Route path="/" element={<Feed />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </div>
     </ContextProvider>

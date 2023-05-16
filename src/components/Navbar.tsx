@@ -16,8 +16,8 @@ const Navbar = () => {
         >
           <AiOutlineMenu size="1.5em" />
         </button>
-        {/* functinal  */}
-        <h1 className="text-3xl font-semibold">Dashboard</h1>
+        <span>{}</span>
+        <h1 className="text-3xl font-semibold">{stateContext?.selectedCategory}</h1>
       </div>
 
       <div className="relative w-2/6 ">
@@ -28,7 +28,7 @@ const Navbar = () => {
           placeholder="Search"
           type="text"
           className="rounded-full border-none outline-none px-3 h-9 w-full focus:shadow-md"
-          //   value=""
+          //value=""
           onChange={() => {}}
         />
       </div>

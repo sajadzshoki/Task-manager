@@ -1,18 +1,37 @@
-import { useState } from "react";
-import Dashboard from "./Dashboard";
-import Navbar from "./Navbar";
-import Finance from "./Finance";
-import TodoList from "./TodoList";
+import { useContext } from "react";
+import { StateContext } from "../context/AppContext";
+import {
+  Dashboard,
+  Navbar,
+  Finance,
+  Setting,
+  TodoList,
+  Shopping,
+  Analytics,
+  Calendar,
+} from "../components";
 
 const Feed = () => {
-  
+  const stateContext = useContext(StateContext);
+
+  // another way ???????!!!!!!!!!!!!!!!
+  // const components = {
+  //   dashboard:<Dashboard/>
+  //   two:<Two/>
+  //   three:<Three/>
+  // }
+  // {components[selected.title]}
+
   return (
-    // ml-12 functional isopen
     <div className="bg-sky-50 h-auto flex-auto rounded-xl duration-75 overflow-y-scroll overflow-x-hidden ">
       <Navbar />
-      {/* <Dashboard /> */}
-      <Finance />
-      {/* <TodoList /> */}
+      {stateContext?.selectedCategory === "Dashboard" && <Dashboard />}
+      {stateContext?.selectedCategory === "Finance" && <Finance />}
+      {stateContext?.selectedCategory === "To Do List" && <TodoList />}
+      {stateContext?.selectedCategory === "Shopping" && <Shopping />}
+      {stateContext?.selectedCategory === "Analytics" && <Analytics />}
+      {stateContext?.selectedCategory === "Setting" && <Setting />}
+      {stateContext?.selectedCategory === "Calendar" && <Calendar />}
     </div>
   );
 };

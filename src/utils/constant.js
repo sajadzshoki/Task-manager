@@ -1,4 +1,4 @@
-import { CiViewList, CiDollar, CiShoppingCart, CiEdit,CiLogout ,CiSettings} from "react-icons/ci";
+import { CiViewList, CiDollar, CiShoppingCart, CiEdit,CiCalendarDate,CiSettings} from "react-icons/ci";
 import { AiOutlineBarChart } from "react-icons/ai";
 
 
@@ -19,9 +19,9 @@ export const expenses = [
 export const categories = [
   { name: "Dashboard", icon: <CiViewList color="white" size="1.5em" /> },
   { name: "Finance", icon: <CiDollar color="white" size="1.5em" /> },
-  { name: "Shopping", icon: <CiShoppingCart color="white" size="1.5em" /> },
   { name: "To Do List", icon: <CiEdit color="white" size="1.5em" /> },
+  { name: "Shopping", icon: <CiShoppingCart color="white" size="1.5em" /> },
   { name: "Analytics", icon: <AiOutlineBarChart color="white" size="1.5em" /> },
+  { name: "Calendar", icon: <CiCalendarDate color="white" size="1.5em" /> },
   { name: "Setting", icon: <CiSettings color="white" size="1.5em" /> },
-  { name: "Logout", icon: <CiLogout color="white" size="1.5em" /> },
 ];

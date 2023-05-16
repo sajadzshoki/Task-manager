@@ -1,0 +1,11 @@
+import React from 'react'
+
+const Setting = () => {
+  return (
+    <div className="flex justify-center items-center h-[80%]">
+      <p className="font-semibold text-5xl text-blue-600 animate-pulse">Comming soon . . .</p>
+    </div>
+  )
+}
+
+export default Setting
