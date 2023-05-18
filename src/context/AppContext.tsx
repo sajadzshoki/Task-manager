@@ -20,7 +20,7 @@ export const StateContext = createContext<StateContextType | null>(null)
 
 export const ContextProvider = ({children}:ContextProviderProps)=>{
     const [isOpen , setIsOpen] = useState<boolean>(true);
-    const [selectedCategory , setSelectedCategory] = useState<string>("Calendar");
+    const [selectedCategory , setSelectedCategory] = useState<string>("Dashboard");
     const [notes, setNotes] = useState<any>([
         {
           id: nanoid(),
