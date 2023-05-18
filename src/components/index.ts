@@ -8,8 +8,8 @@ import Setting from "./Setting";
 import Analytics from "./Analytics";
 import Shopping from "./Shopping";
 import TodoList from "./TodoList";
-import Calendar from "./Calendar";
+import CalendarCmp from "./CalendarCmp";
 
 
 
-export {Sidebar,Feed,Dashboard,Todo,Finance,Navbar,Setting,Analytics,Shopping,TodoList,Calendar} 
+export {Sidebar,Feed,Dashboard,Todo,Finance,Navbar,Setting,Analytics,Shopping,TodoList,CalendarCmp} 

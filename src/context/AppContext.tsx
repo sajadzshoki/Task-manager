@@ -1,7 +1,7 @@
 import { nanoid } from "@reduxjs/toolkit";
 import { SetStateAction, createContext,  useState } from "react";
 
-const initialState ={}
+// const initialState ={}
 
 type ContextProviderProps = {
     children: React.ReactNode
@@ -20,7 +20,7 @@ export const StateContext = createContext<StateContextType | null>(null)
 
 export const ContextProvider = ({children}:ContextProviderProps)=>{
     const [isOpen , setIsOpen] = useState<boolean>(true);
-    const [selectedCategory , setSelectedCategory] = useState<string>("Dashboard");
+    const [selectedCategory , setSelectedCategory] = useState<string>("Calendar");
     const [notes, setNotes] = useState<any>([
         {
           id: nanoid(),

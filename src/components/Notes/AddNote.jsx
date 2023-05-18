@@ -17,7 +17,7 @@ function AddNote({ handleAddNote }) {
     }
   };
   return (
-    <div className="bg-yellow-200 rounded-xl p-4 min-h-[10rem] shadow-md relative overflow-x-auto">
+    <div className="bg-lime-300 rounded-xl p-4 min-h-[10rem] shadow-md relative overflow-x-auto">
       <textarea
         className="w-[14rem] h-[10rem] border-none resize-none focus:outline-none bg-transparent "
         placeholder="Add a new note"

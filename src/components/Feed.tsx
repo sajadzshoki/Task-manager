@@ -8,7 +8,7 @@ import {
   TodoList,
   Shopping,
   Analytics,
-  Calendar,
+  CalendarCmp,
 } from "../components";
 
 const Feed = () => {
@@ -31,7 +31,7 @@ const Feed = () => {
       {stateContext?.selectedCategory === "Shopping" && <Shopping />}
       {stateContext?.selectedCategory === "Analytics" && <Analytics />}
       {stateContext?.selectedCategory === "Setting" && <Setting />}
-      {stateContext?.selectedCategory === "Calendar" && <Calendar />}
+      {stateContext?.selectedCategory === "Calendar" && <CalendarCmp />}
     </div>
   );
 };
