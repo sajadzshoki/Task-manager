@@ -1,10 +1,12 @@
 import React from "react";
-
-function AddNote({ handleAddNote }) {
+type propsType ={
+  handleAddNote : any
+}
+function AddNote({ handleAddNote}:propsType ) {
   const [noteText, setNoteText] = React.useState("");
   const characterLimit = 200;
 
-  const handleLimit = (event) => {
+  const handleLimit = (event:any) => {
     if (characterLimit - event.target.value.length >= 0) {
       setNoteText(event.target.value);
     }

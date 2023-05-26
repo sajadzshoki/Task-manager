@@ -1,16 +1,18 @@
 import React from "react";
 import { AiOutlineHome } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import LoginForm from "../components/LoginForm";
 const Login = () => {
   return (
-    <div>
-      <h1 className="text-3xl mb-10">Login Page</h1>
+    <div className="w-full flex justify-center items-center flex-col">
+       
       <Link to="/">
         <button>
           <AiOutlineHome size="2rem" />
           Back to Home(temprory)
         </button>
-      </Link>
+      </Link> 
+      <LoginForm/>
     </div>
   );
 };

@@ -5,11 +5,12 @@ import {
   Navbar,
   Finance,
   Setting,
-  TodoList,
+  Notes,
   Shopping,
   Analytics,
   CalendarCmp,
 } from "../components";
+import Tasks from "./Tasks";
 
 const Feed = () => {
   const stateContext = useContext(StateContext);
@@ -26,8 +27,9 @@ const Feed = () => {
     <div className="bg-sky-50 h-auto flex-auto rounded-xl duration-75 overflow-y-scroll overflow-x-hidden ">
       <Navbar />
       {stateContext?.selectedCategory === "Dashboard" && <Dashboard />}
+      {stateContext?.selectedCategory === "Tasks" && <Tasks />}
       {stateContext?.selectedCategory === "Finance" && <Finance />}
-      {stateContext?.selectedCategory === "To Do List" && <TodoList />}
+      {stateContext?.selectedCategory === "Notes" && <Notes />}
       {stateContext?.selectedCategory === "Shopping" && <Shopping />}
       {stateContext?.selectedCategory === "Analytics" && <Analytics />}
       {stateContext?.selectedCategory === "Setting" && <Setting />}

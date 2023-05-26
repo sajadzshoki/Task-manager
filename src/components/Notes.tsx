@@ -5,7 +5,7 @@ import NotesList from "./Notes/NoteList";
 import { StateContext } from "../context/AppContext";
 
 
-function TodoList() {
+function Notes() {
   // const stateContext = useContext(StateContext);
   const [notes, setNotes] = React.useState([
     {
@@ -62,5 +62,5 @@ function TodoList() {
   );
 }
 
-export default TodoList;
+export default Notes;
 

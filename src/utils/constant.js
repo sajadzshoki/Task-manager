@@ -1,5 +1,6 @@
 import { CiViewList, CiDollar, CiShoppingCart, CiEdit,CiCalendarDate,CiSettings} from "react-icons/ci";
 import { AiOutlineBarChart } from "react-icons/ai";
+import { RxDashboard } from "react-icons/rx";
 
 
 
@@ -17,11 +18,12 @@ export const expenses = [
 
 
 export const categories = [
-  { name: "Dashboard", icon: <CiViewList color="white" size="1.5em" /> },
+  { name: "Dashboard", icon: <RxDashboard color="white" size="1.4em" /> },
+  { name: "Tasks", icon: <CiViewList color="white" size="1.5em" /> },
   { name: "Finance", icon: <CiDollar color="white" size="1.5em" /> },
-  { name: "To Do List", icon: <CiEdit color="white" size="1.5em" /> },
+  { name: "Notes", icon: <CiEdit color="white" size="1.5em" /> },
+  { name: "Calendar", icon: <CiCalendarDate color="white" size="1.5em" /> },
   { name: "Shopping", icon: <CiShoppingCart color="white" size="1.5em" /> },
   { name: "Analytics", icon: <AiOutlineBarChart color="white" size="1.5em" /> },
-  { name: "Calendar", icon: <CiCalendarDate color="white" size="1.5em" /> },
   { name: "Setting", icon: <CiSettings color="white" size="1.5em" /> },
 ];

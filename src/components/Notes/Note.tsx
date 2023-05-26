@@ -1,7 +1,12 @@
-import React from "react";
-import { MdDeleteForever } from "react-icons/md";
 
-const Note = ({ id, text, date, handleDeleteNote }) => {
+import { MdDeleteForever } from "react-icons/md";
+export type propsType = {
+  id : number
+  text: String
+  date : any
+  handleDeleteNote : any
+}
+const Note = ({ id, text, date, handleDeleteNote }:propsType) => {
   return (
     <div className="bg-sky-400 rounded-xl p-4 min-h-[10rem] shadow-md relative overflow-x-auto">
       <span>{text}</span>
