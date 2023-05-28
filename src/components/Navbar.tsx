@@ -5,19 +5,21 @@ import { useContext } from "react";
 import { StateContext } from "../context/AppContext";
 import { AiOutlineMenu } from "react-icons/ai";
 const Navbar = () => {
-  const stateContext = useContext(StateContext);
+  
+  const {isOpen ,selectedCategory,setIsOpen} = useContext(StateContext);
   return (
     // z-10 becuse of dashboard elements
     <div className="flex justify-between items-center w-full mb-4 border-b-2 pb-3 sticky top-0 bg-sky-50 p-4 z-10 ">
       <div className="flex">
         <button
           className=" mr-2 rounded-full p-2 hover:bg-sky-200"
-          onClick={() => stateContext?.setIsOpen(!stateContext?.isOpen)}
+          
+          onClick={() => setIsOpen(!isOpen)}
         >
           <AiOutlineMenu size="1.5em" />
         </button>
         <span>{}</span>
-        <h1 className="text-3xl font-semibold">{stateContext?.selectedCategory}</h1>
+        <h1 className="text-3xl font-semibold">{selectedCategory}</h1>
       </div>
 
       <div className="relative w-2/6 ">

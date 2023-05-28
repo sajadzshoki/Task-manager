@@ -6,19 +6,19 @@ import { StateContext } from "../context/AppContext";
 
 
 function Notes() {
-  // const stateContext = useContext(StateContext);
-  const [notes, setNotes] = React.useState([
-    {
-      id: nanoid(),
-      text: "this is the first note",
-      date: "12/11/2022",
-    },
-    {
-      id: nanoid(),
-      text: "this is the second note",
-      date: "14/11/2022",
-    },
-  ]);
+  const {notes,setNotes} = useContext(StateContext);
+  // const [notes, setNotes] = React.useState([
+  //   {
+  //     id: nanoid(),
+  //     text: "this is the first note",
+  //     date: "12/11/2022",
+  //   },
+  //   {
+  //     id: nanoid(),
+  //     text: "this is the second note",
+  //     date: "14/11/2022",
+  //   },
+  // ]);
 
   // React.useEffect(() => {
   //   const savedNotes = JSON.parse(localStorage.getItem("react-notes-app-data"));
@@ -32,6 +32,9 @@ function Notes() {
   //   localStorage.setItem("react-notes-app-data", JSON.stringify(notes));
   // }, [notes]);
 
+
+
+
   const addNote = (text:any) => {
     const date = new Date();
     const newNote = {
@@ -40,18 +43,19 @@ function Notes() {
       date: date.toLocaleDateString(),
     };
     // ??????????????????
-    const newNotes = [...notes, newNote];
-    setNotes(newNotes);
-  };
-  const deleteNote = (id:string) => {
-    const newNotes = notes.filter((note) => note.id !== id);
+    const newNotes:any = [...notes, newNote];
     setNotes(newNotes);
   };
 
-  return (
+
+   const deleteNote = (id:number) => {
+    const newNotes = notes.filter((note:string| any) => note.id !== id);
+    setNotes(newNotes);
     
+  };
+
+  return (
     <div className="p-4">
-   
       <NotesList
         notes={notes}
         handleAddNote={addNote}
