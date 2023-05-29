@@ -6,7 +6,8 @@ module.exports = {
       gridTemplateColumns: {
         
         'dashboard': 'repeat(auto-fit, minmax(300px, 1fr))',
-        'notes-list': 'repeat(auto-fit, minmax(230px, 1fr))'
+        'notes-list': 'repeat(auto-fit, minmax(230px, 1fr))',
+        'tasks': 'repeat(auto-fit, minmax(230px, 1fr))'
         },
       colors: {
         blue: {

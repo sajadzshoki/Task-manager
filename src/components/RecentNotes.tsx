@@ -15,9 +15,9 @@ const RecentNotes = () => {
   };
   return (
     <div>
-      {/* or w-3/12 */}
+      {/* or w-3/12  overflow-auto*/}
       <div
-        className="w-72 shadow-md bg-white p-3 rounded-md max-h-[600px] overflow-auto"
+        className="w-72 shadow-md bg-white p-3 rounded-md max-h-[600px] "
       >
         <div className="flex justify-between items-center mb-4 relative">
           {/* go to to do list  */}
