@@ -18,14 +18,14 @@ const Sidebar = () => {
         stateContext?.isOpen ? "right-0" : "ml-[-15.9rem]"
       }`}
     >
-      <div className="flex items-center p-4">
+      <div className="flex items-center p-4 ">
         <SiTask color="white" size="1.5rem"/>
         <h1 className="text-2xl font-bold  text-white ml-2">Task Manager</h1>
       </div>
 
       {categories.map((category) => (
         <button
-          className={`${buttonStyles}
+          className={`${buttonStyles} hover:bg-blue-800
           ${
             category.name === stateContext?.selectedCategory && "bg-blue-800 "
           }`}

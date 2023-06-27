@@ -18,7 +18,7 @@ const Navbar = () => {
         >
           <AiOutlineMenu size="1.5em" />
         </button>
-        <span>{}</span>
+        
         <h1 className="text-3xl font-semibold">{selectedCategory}</h1>
       </div>
 
@@ -41,7 +41,7 @@ const Navbar = () => {
         <img
           alt="profile pic "
           src={profile}
-          className="object-contain w-14 h-14 ml-2 "
+          className="object-contain w-14 h-14 ml-2 rounded-full"
         />
       </div>
     </div>

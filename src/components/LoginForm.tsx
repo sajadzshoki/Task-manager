@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 
 const Login = () => {
-  const [isLogin, setIsLogin] = useState("signup");
+  // const [isLogin, setIsLogin] = useState("signup");
   return (
    
       <div className="w-full max-w-xs ">

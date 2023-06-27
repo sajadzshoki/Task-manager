@@ -1,6 +1,4 @@
-import { BsThreeDotsVertical } from "react-icons/bs";
-import { IoAddSharp } from "react-icons/io5";
-import { AiOutlineDelete } from "react-icons/ai";
+
 import BackLog from "./Task/BackLog";
 import InPorgress from "./Task/InPorgress";
 import Complete from "./Task/Complete";
