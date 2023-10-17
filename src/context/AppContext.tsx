@@ -8,10 +8,10 @@ type ContextProviderProps = {
 };
 
 type StateContextType = {
-  isOpen: boolean;
-  setIsOpen: React.Dispatch<SetStateAction<boolean>>;
-  selectedCategory: string;
-  setSelectedCategory: React.Dispatch<SetStateAction<string>>;
+  // isOpen: boolean;
+  // setIsOpen: React.Dispatch<SetStateAction<boolean>>;
+  // selectedCategory: string;
+  // setSelectedCategory: React.Dispatch<SetStateAction<string>>;
   // notes: string | Array<string | number> | any //any becuse filter method in notes gives error;
   notes: {
     id: string;
@@ -35,8 +35,8 @@ export const StateContext = createContext<StateContextType>(
 );
 
 export const ContextProvider = ({ children }: ContextProviderProps) => {
-  const [isOpen, setIsOpen] = useState<boolean>(true);
-  const [selectedCategory, setSelectedCategory] = useState<string>("Dashboard");
+  // const [isOpen, setIsOpen] = useState<boolean>(true);
+  // const [selectedCategory, setSelectedCategory] = useState<string>("Dashboard");
   const [notes, setNotes] = useState([
     {
       id: nanoid(),
@@ -53,10 +53,10 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
   return (
     <StateContext.Provider
       value={{
-        isOpen,
-        setIsOpen,
-        selectedCategory,
-        setSelectedCategory,
+        // isOpen,
+        // setIsOpen,
+        // selectedCategory,
+        // setSelectedCategory,
         notes,
         setNotes,
       }}
@@ -66,30 +66,3 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
   );
 };
 
-// import React, { useState, createContext } from 'react'
-
-// type AuthUser = {
-//   name: string
-//   email: string
-// }
-
-// type UserContextType = {
-//   user: AuthUser | null
-//   setUser: React.Dispatch<React.SetStateAction<AuthUser | null>>
-// }
-
-// type UserContextProviderProps = {
-//   children: React.ReactNode
-// }
-
-// // export const UserContext = createContext<UserContextType | null>(null)
-// export const UserContext = createContext({} as UserContextType)
-
-// export const UserContextProvider = ({ children }: UserContextProviderProps) => {
-//   const [user, setUser] = useState<AuthUser | null>(null)
-//   return (
-//     <UserContext.Provider value={{ user, setUser }}>
-//       {children}
-//     </UserContext.Provider>
-//   )
-// }

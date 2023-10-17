@@ -1,9 +1,11 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-// import counterReducer from '../features/counter/counterSlice';
+import isOpenReducer from '../features/IsOpenSlice';
+import selectedCategory from '../features/categorySlice';
 
 export const store = configureStore({
   reducer: {
-    // counter: counterReducer,
+    isOpen: isOpenReducer,
+    category:selectedCategory
   },
 });
 

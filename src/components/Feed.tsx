@@ -12,9 +12,12 @@ import {
 } from "../components";
 import Tasks from "./Tasks";
 
-const Feed = () => {
-  const stateContext = useContext(StateContext);
+import { useAppSelector } from "../app/hooks";
 
+import { RootState } from '../app/store';
+const Feed = () => {
+  // const stateContext = useContext(StateContext);
+  const selectedCategory = useAppSelector((state:RootState)=>state.category.selectedCategory)
   // another way ???????!!!!!!!!!!!!!!!
   // const components = {
   //   dashboard:<Dashboard/>
@@ -26,14 +29,14 @@ const Feed = () => {
   return (
     <div className="bg-sky-50 h-auto flex-auto rounded-xl duration-75 overflow-y-scroll overflow-x-hidden ">
       <Navbar />
-      {stateContext?.selectedCategory === "Dashboard" && <Dashboard />}
-      {stateContext?.selectedCategory === "Tasks" && <Tasks />}
-      {stateContext?.selectedCategory === "Finance" && <Finance />}
-      {stateContext?.selectedCategory === "Notes" && <Notes />}
-      {stateContext?.selectedCategory === "Shopping" && <Shopping />}
-      {stateContext?.selectedCategory === "Analytics" && <Analytics />}
-      {stateContext?.selectedCategory === "Setting" && <Setting />}
-      {stateContext?.selectedCategory === "Calendar" && <CalendarCmp />}
+      {selectedCategory === "Dashboard" && <Dashboard />}
+      {selectedCategory === "Tasks" && <Tasks />}
+      {selectedCategory === "Finance" && <Finance />}
+      {selectedCategory === "Notes" && <Notes />}
+      {selectedCategory === "Shopping" && <Shopping />}
+      {selectedCategory === "Analytics" && <Analytics />}
+      {selectedCategory === "Setting" && <Setting />}
+      {selectedCategory === "Calendar" && <CalendarCmp />}
     </div>
   );
 };

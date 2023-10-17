@@ -4,9 +4,23 @@ import profile from "../assets/profile.png";
 import { useContext } from "react";
 import { StateContext } from "../context/AppContext";
 import { AiOutlineMenu } from "react-icons/ai";
+
+
+import { RootState } from '../app/store';
+import { setIsOpen } from '../features/IsOpenSlice'
+
+import { useAppSelector, useAppDispatch } from '../app/hooks';
 const Navbar = () => {
   
-  const {isOpen ,selectedCategory,setIsOpen} = useContext(StateContext);
+  // const {isOpen ,selectedCategory,setIsOpen} = useContext(StateContext);
+  // const {selectedCategory} = useContext(StateContext);
+const selectedCategory = useAppSelector((state:RootState)=>state.category.selectedCategory)
+
+  const isOpen = useAppSelector((state:RootState)=>state.isOpen.isOpen)
+  const dispatch = useAppDispatch();
+  const toggleIsOpen = () => {
+    dispatch(setIsOpen(!isOpen));
+  };
   return (
     // z-10 becuse of dashboard elements
     <div className="flex justify-between items-center w-full mb-4 border-b-2 pb-3 sticky top-0 bg-sky-50 p-4 z-10 ">
@@ -14,7 +28,7 @@ const Navbar = () => {
         <button
           className=" mr-2 rounded-full p-2 hover:bg-sky-200"
           
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={toggleIsOpen}
         >
           <AiOutlineMenu size="1.5em" />
         </button>
