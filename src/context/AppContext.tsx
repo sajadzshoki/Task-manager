@@ -25,6 +25,7 @@ type StateContextType = {
         id: string;
         text: string;
         date: string;
+        
       }[]
     >
   >;
@@ -42,11 +43,13 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
       id: nanoid(),
       text: "this is the first note",
       date: "12/11/2022",
+      
     },
     {
       id: nanoid(),
       text: "this is the second note",
       date: "14/11/2022",
+      
     },
   ]);
 

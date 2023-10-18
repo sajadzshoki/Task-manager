@@ -13,6 +13,32 @@ const RecentNotes = () => {
     const newNotes = notes.filter((note: string | any) => note.id !== id);
     setNotes(newNotes);
   };
+  const toggleNoteStatus = (id:number) => {
+    const updatedNotes = notes.map((note:any) => {
+      if (note.id === id) {
+        // Toggle the 'done' property for the clicked note
+        (setDone(!done));
+      }
+      return note;
+    });
+
+    // Update the notes with the modified 'done' property
+    setNotes(updatedNotes);
+  };
+  // const toggleNoteStatus = (id: number) => {
+  //   const updatedNotes = notes.map((note: any) => {
+  //     if (note.id === id) {
+  //       // Toggle the 'done' property for the clicked note
+  //       return { ...note, done: !note.done };
+        
+  //     }
+  //     return note;
+  //   });
+  
+  //   // Update the notes with the modified 'done' property
+  //   setNotes(updatedNotes);
+  // };
+
   return (
     <div>
       {/* or w-3/12  overflow-auto*/}
@@ -55,11 +81,11 @@ const RecentNotes = () => {
                 <MdDone
                   size="1.3em"
                   className="hover:text-green-400 active:scale-95"
-                  onClick={() => setDone(!done)}
+                  onClick={()=>toggleNoteStatus(note.id)}
                   title="Done"
                 />
               ) : (
-                <MdRemoveDone onClick={() => setDone(!done)} title="UnDone" className="hover:text-red-500 active:scale-95"/>
+                <MdRemoveDone onClick={() => toggleNoteStatus(note.id)} title="UnDone" className="hover:text-red-500 active:scale-95"/>
               )}
             </button>
           </div>
