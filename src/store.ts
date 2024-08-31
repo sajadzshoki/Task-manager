@@ -1,19 +1,26 @@
 import { create } from "zustand";
 
-// type category = {
-//   selectedCategory: string;
-// };
-
 type isOpen = {
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
 };
-
 export const useIsOpen = create<isOpen>((set) => ({
   isOpen: true, //initial state
-  setIsOpen: (isOpen: boolean) => set({ isOpen }),// update state
+  setIsOpen: (isOpen: boolean) => set({ isOpen }), // update state
 }));
 
-// export const useSelectedCategoty = create<category>(() => ({
-//   selectedCategory: "Dashboard",
-// }));
+
+
+type category = {
+  selectedCategory: string;
+  setSelectedCategory: (category: string) => void;
+};
+
+export const useSelectedCategory = create<category>((set) => ({
+  selectedCategory: "Dashboard",
+  setSelectedCategory: (selectedCategory: string) => set({ selectedCategory }),
+  
+  // chatgpt solution
+  // setSelectedCategory: (category: string) =>
+  //   set(() => ({ selectedCategory: category })),
+}));

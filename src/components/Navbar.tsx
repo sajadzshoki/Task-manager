@@ -1,33 +1,31 @@
-import React from "react";
 import { FiSearch } from "react-icons/fi";
 import profile from "../assets/profile.png";
 import { AiOutlineMenu } from "react-icons/ai";
-import { RootState } from '../app/store';
-import { setIsOpen } from '../features/IsOpenSlice'
-import { useAppSelector } from '../app/hooks';
-import {useIsOpen} from "../store"
 
+import { useIsOpen, useSelectedCategory } from "../store";
 
 const Navbar = () => {
-const selectedCategory = useAppSelector((state:RootState)=>state.category.selectedCategory)
+  //zustand
+  const selectedCategory = useSelectedCategory(
+    (state) => state.selectedCategory
+  );
 
-  //zustand 
-  const isOpen = useIsOpen((state)=>state.setIsOpen)
-  const toggleIsOpen = ()=>{
-    (setIsOpen(!isOpen))
-  }
+  const isOpen = useIsOpen((state) => state.isOpen);
+  const setIsOpen = useIsOpen((state) => state.setIsOpen);
+  const toggleIsOpen = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     // z-10 becuse of dashboard elements
     <div className="flex justify-between items-center w-full mb-4 border-b-2 pb-3 sticky top-0 bg-sky-50 p-4 z-10 ">
       <div className="flex">
         <button
           className=" mr-2 rounded-full p-2 hover:bg-sky-200"
-          
           onClick={toggleIsOpen}
         >
           <AiOutlineMenu size="1.5em" />
         </button>
-        
+
         <h1 className="text-3xl font-semibold">{selectedCategory}</h1>
       </div>
 
@@ -44,7 +42,7 @@ const selectedCategory = useAppSelector((state:RootState)=>state.category.select
         />
       </div>
 
-      {/* functinal  */}
+      {/* functional  */}
       <div className="flex items-center">
         <p> Sajad shoki </p>
         <img

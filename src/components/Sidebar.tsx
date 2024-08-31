@@ -1,24 +1,23 @@
 import { Link } from "react-router-dom";
 import { categories } from "../utils/constant";
-// import { useContext } from "react";
-// import { StateContext } from "../context/AppContext";
+
 import { CiLogout } from "react-icons/ci";
 import { SiTask } from "react-icons/si";
 
-import { RootState } from "../app/store";
-import { useAppSelector, useAppDispatch } from "../app/hooks";
-import {setSelectedCategory} from '../features/categorySlice'
-const Sidebar = () => {
-  // const stateContext = useContext(StateContext);
+import {useIsOpen, useSelectedCategory} from "../store"
 
-  const isOpen = useAppSelector((state: RootState) => state.isOpen.isOpen);
-  const dispatch = useAppDispatch();
-  const selectedCategory = useAppSelector(
-    (state: RootState) => state.category.selectedCategory
-  );
+const Sidebar = () => {
+
+  // zustand
+  const selectedCategory = useSelectedCategory((state)=>state.selectedCategory)
+  const setSelectedCategory = useSelectedCategory((state)=>state.setSelectedCategory)
+  //???????better way ?☺
   const handleCategoryChange = (newCategory: string) => {
-    dispatch(setSelectedCategory(newCategory));
+    (setSelectedCategory(newCategory));
   };
+
+  
+  const isOpen = useIsOpen((state) => state.isOpen);
 
   const buttonStyles = [
     `text-white my-2 pl-5 flex gap-5 items-center  w-full rounded-xl py-4

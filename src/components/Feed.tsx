@@ -1,5 +1,4 @@
-import { useContext } from "react";
-import { StateContext } from "../context/AppContext";
+
 import {
   Dashboard,
   Navbar,
@@ -12,19 +11,13 @@ import {
 } from "../components";
 import Tasks from "./Tasks";
 
-import { useAppSelector } from "../app/hooks";
+import { useSelectedCategory} from "../store"
 
-import { RootState } from '../app/store';
+
 const Feed = () => {
-  // const stateContext = useContext(StateContext);
-  const selectedCategory = useAppSelector((state:RootState)=>state.category.selectedCategory)
-  // another way ???????!!!!!!!!!!!!!!!
-  // const components = {
-  //   dashboard:<Dashboard/>
-  //   two:<Two/>
-  //   three:<Three/>
-  // }
-  // {components[selected.title]}
+
+//zustand 
+const selectedCategory = useSelectedCategory((state)=>state.selectedCategory)
 
   return (
     <div className="bg-sky-50 h-auto flex-auto rounded-xl duration-75 overflow-y-scroll overflow-x-hidden ">
