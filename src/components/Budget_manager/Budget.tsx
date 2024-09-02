@@ -18,7 +18,8 @@ interface ViewBudgetProps {
   handleEditClick: () => void;
 }
 
-// why isn't it possible to write them in one type and add the, 
+// why isn't it possible to write them in one type and add, 
+
 // interface types {
 //   budget: number;
 //   id:string;

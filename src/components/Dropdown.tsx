@@ -1,5 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
-import useClickOutside from '../hooks/useClickOutside';
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import  { useState } from 'react';
+import useClickOutside from '../hook/useClickOutside';
 
 const Dropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,7 +55,3 @@ const Dropdown = () => {
 };
 
 export default Dropdown;
-function handleClickOutside(this: Document, ev: MouseEvent) {
-  throw new Error('Function not implemented.');
-}
-

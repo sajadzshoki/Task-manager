@@ -5,7 +5,7 @@ import { MdDone, MdRemoveDone } from "react-icons/md";
 import { StateContext } from "../../context/NotesContext";
 import { useContext, useState } from "react";
 import { useSelectedCategory } from "../../ZustandStore";
-import useClickOutside from "../../hooks/useClickOutside";
+import useClickOutside from "../../hook/useClickOutside";
 
 const RecentNotes = () => {
   const { notes, setNotes } = useContext(StateContext);
