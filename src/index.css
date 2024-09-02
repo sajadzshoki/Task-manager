@@ -41,3 +41,8 @@ body {
 *::-webkit-scrollbar-thumb:active {
     background-color: #1c5fef;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

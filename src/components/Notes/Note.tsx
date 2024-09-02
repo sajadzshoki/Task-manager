@@ -4,6 +4,7 @@ export type propsType = {
   id : number
   text: String
   date : any
+  done:boolean
   handleDeleteNote : any
 }
 const Note = ({ id, text, date, handleDeleteNote }:propsType) => {

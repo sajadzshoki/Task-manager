@@ -1,6 +1,6 @@
 import Sidebar from "./Sidebar";
 import Feed from "./Feed";
-import Dashboard from "./Dashboard";
+import Dashboard from "./Dashboard/Dashboard";
 import Todo from "./Notes";
 import Finance from "./Finance";
 import Navbar from "./Navbar";

@@ -12,6 +12,7 @@ type StateContextType = {
     id: string;
     text: string;
     date: string;
+    done:boolean;
   }|any;
   // setNotes: React.Dispatch<SetStateAction<string>>;
   setNotes: React.Dispatch<
@@ -20,7 +21,7 @@ type StateContextType = {
         id: string;
         text: string;
         date: string;
-        
+        done:boolean
       }[]
     >
   >;
@@ -37,12 +38,13 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
       id: nanoid(),
       text: "this is the first note",
       date: "12/11/2022",
-      
+      done:false
     },
     {
       id: nanoid(),
       text: "this is the second note",
       date: "14/11/2022",
+      done:false
       
     },
   ]);

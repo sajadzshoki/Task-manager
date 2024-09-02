@@ -18,8 +18,8 @@ export const categories = [
   { name: "Tasks", icon: <CiViewList color="white" size="1.5em" /> },
   { name: "Finance", icon: <CiDollar color="white" size="1.5em" /> },
   { name: "Notes", icon: <CiEdit color="white" size="1.5em" /> },
-  { name: "Calendar", icon: <CiCalendarDate color="white" size="1.5em" /> },
   { name: "Shopping", icon: <CiShoppingCart color="white" size="1.5em" /> },
+  { name: "Calendar", icon: <CiCalendarDate color="white" size="1.5em" /> },
   { name: "Analytics", icon: <AiOutlineBarChart color="white" size="1.5em" /> },
   { name: "Setting", icon: <CiSettings color="white" size="1.5em" /> },
 ];
