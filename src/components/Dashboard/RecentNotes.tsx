@@ -3,7 +3,7 @@ import { MdDelete } from "react-icons/md";
 import { MdDone, MdRemoveDone } from "react-icons/md";
 // import Notes from "./Notes";
 import { StateContext } from "../../context/AppContext";
-import { useContext, useRef, useState } from "react";
+import { useContext, useState } from "react";
 import { useSelectedCategory } from "../../store";
 import useClickOutside from "../../hooks/useClickOutside";
 
