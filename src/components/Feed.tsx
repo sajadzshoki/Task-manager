@@ -11,7 +11,7 @@ import {
 } from "../components";
 import Tasks from "./Tasks";
 
-import { useSelectedCategory} from "../store"
+import { useSelectedCategory} from "../ZustandStore"
 
 
 const Feed = () => {

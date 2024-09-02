@@ -2,9 +2,9 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { MdDelete } from "react-icons/md";
 import { MdDone, MdRemoveDone } from "react-icons/md";
 // import Notes from "./Notes";
-import { StateContext } from "../../context/AppContext";
+import { StateContext } from "../../context/NotesContext";
 import { useContext, useState } from "react";
-import { useSelectedCategory } from "../../store";
+import { useSelectedCategory } from "../../ZustandStore";
 import useClickOutside from "../../hooks/useClickOutside";
 
 const RecentNotes = () => {

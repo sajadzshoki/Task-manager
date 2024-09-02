@@ -4,7 +4,7 @@ import { categories } from "../utils/constant";
 import { CiLogout } from "react-icons/ci";
 import { SiTask } from "react-icons/si";
 
-import {useIsOpen, useSelectedCategory} from "../store"
+import {useIsOpen, useSelectedCategory} from "../ZustandStore"
 
 const Sidebar = () => {
 

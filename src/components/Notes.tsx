@@ -2,7 +2,7 @@
 import React, { useContext } from "react";
 import { nanoid } from "nanoid";
 import NotesList from "./Notes/NoteList";
-import { StateContext } from "../context/AppContext";
+import { StateContext } from "../context/NotesContext";
 
 
 function Notes() {

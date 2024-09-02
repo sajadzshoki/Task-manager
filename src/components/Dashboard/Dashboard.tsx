@@ -1,6 +1,6 @@
 import React from "react";
 import  RecentNotes  from "./RecentNotes";
-import { StateContext } from "../../context/AppContext";
+import { StateContext } from "../../context/NotesContext";
 import { useContext } from "react";
 const Dashboard = () => {
   const {notes} = useContext(StateContext);

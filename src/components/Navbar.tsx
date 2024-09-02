@@ -2,7 +2,7 @@ import { FiSearch } from "react-icons/fi";
 import profile from "../assets/profile.png";
 import { AiOutlineMenu } from "react-icons/ai";
 
-import { useIsOpen, useSelectedCategory } from "../store";
+import { useIsOpen, useSelectedCategory } from "../ZustandStore";
 
 const Navbar = () => {
   //zustand
