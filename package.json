@@ -8,7 +8,6 @@
     "@mui/material": "^5.13.1",
     "@mui/x-date-pickers": "^6.4.0",
     "@syncfusion/ej2-react-calendars": "^19.4.48",
-    "@syncfusion/ej2-react-charts": "^21.2.8",
     "@syncfusion/ej2-react-schedule": "^19.4.50",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
