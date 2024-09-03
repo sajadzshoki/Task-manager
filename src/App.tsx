@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 const App = () => {
   return (
     <ContextProvider>
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />

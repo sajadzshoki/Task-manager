@@ -17,7 +17,7 @@ type category = {
 };
 
 export const useSelectedCategory = create<category>((set) => ({
-  selectedCategory: "Dashboard",
+  selectedCategory: "Tasks",
   setSelectedCategory: (selectedCategory: string) => set({ selectedCategory }),
   
   // chatgpt solution

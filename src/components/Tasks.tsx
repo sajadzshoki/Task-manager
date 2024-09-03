@@ -22,11 +22,9 @@ const Tasks = () => {
     const widgetType = e.dataTransfer.getData("widgetTpe") as string;
     setInPorgress([...inPorgress, widgetType]);
   };
-  // const handleDragOver = (e: React.DragEvent) => {
-  //   e.preventDefault();
-  // };
+
   return (
-    <div className="p-4 flex justify-evenly items-start sm:">
+    <div className="p-4 flex justify-evenly items-start rounded-xl bg-slate-200 shadow-inner mx-auto max-w-5xl">
       <BackLog
         backlog={backlog}
         setBacklog={setBacklog}

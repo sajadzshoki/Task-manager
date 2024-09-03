@@ -20,7 +20,7 @@ const Sidebar = () => {
   const isOpen = useIsOpen((state) => state.isOpen);
 
   const buttonStyles = [
-    `text-white my-2 pl-5 flex gap-5 items-center  w-full rounded-xl py-4
+    `text-white my-2 pl-5 flex gap-3 items-center  w-full rounded-xl py-4
   active:scale-95 `,
   ];
 
