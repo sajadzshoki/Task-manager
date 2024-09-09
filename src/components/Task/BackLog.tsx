@@ -4,7 +4,6 @@ import { useTasks} from "../../hook/useTasks";
 const BackLog = ({
   backlog,
   setBacklog,
-  handleOnDrag,
 }: {
   backlog: string[];
   setBacklog: React.Dispatch<React.SetStateAction<string[]>>;
@@ -33,7 +32,7 @@ const BackLog = ({
       removeAll={removeAll}
       title="Backlog"
       deleteAllTitle="Remove all"
-      BorderColor="border-red-400"
+      BorderColor="border-red-500"
     />
   );
 };
