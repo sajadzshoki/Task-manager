@@ -1,5 +1,5 @@
 import TaskList from "./TaskList";
-import { useTasks } from "../../hook/useTasks";
+import { useTasks } from "../../hooks/useTasks";
 
 const Complete = ({
   complete,
@@ -31,7 +31,7 @@ const Complete = ({
       removeAll={removeAll}
       title="Complete"
       deleteAllTitle="Remove all"
-      BorderColor="border-blue-600"
+      BorderColor="border-green-500"
     />
   );
 };

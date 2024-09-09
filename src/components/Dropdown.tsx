@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import  { useState } from 'react';
-import useClickOutside from '../hook/useClickOutside';
+import useClickOutside from '../hooks/useClickOutside';
 
 const Dropdown = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -10,7 +10,7 @@
 
 // export default Setting
 import React, { useState } from 'react';
-import useDragAndDrop from '../hook/DragnDrop';
+import useDragAndDrop from '../hooks/DragnDrop';
 
 
 interface Item {

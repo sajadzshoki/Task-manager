@@ -5,7 +5,7 @@ import { MdDone, MdRemoveDone } from "react-icons/md";
 import { StateContext } from "../../context/NotesContext";
 import { useContext, useState } from "react";
 import { useSelectedCategory } from "../../ZustandStore";
-import useClickOutside from "../../hook/useClickOutside";
+import useClickOutside from "../../hooks/useClickOutside";
 
 const RecentNotes = () => {
   const { notes, setNotes } = useContext(StateContext);
@@ -49,7 +49,7 @@ const RecentNotes = () => {
           {/* go to to do list  */}
           <h1
             onClick={() => handleCategoryChange("Notes")}
-            className=" text-lg cursor-pointer"
+            className=" text-lg cursor-pointer hover:drop-shadow-md"
           >
             Recent notes
           </h1>

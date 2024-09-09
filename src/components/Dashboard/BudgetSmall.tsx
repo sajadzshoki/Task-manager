@@ -3,6 +3,7 @@ import { useSelectedCategory } from "../../ZustandStore";
 import { AppProvider } from "../../context/budgetContext";
 
 const BudgetSmall = () => {
+  //takes you to sshopping feed
   const setSelectedCategory = useSelectedCategory(
     (state) => state.setSelectedCategory
   );
@@ -14,9 +15,9 @@ const BudgetSmall = () => {
       <div className="w-80 shadow-md bg-white p-3 rounded-md grid gap-3">
         <h1
           onClick={() => handleCategoryChange("Shopping")}
-          className=" text-lg cursor-pointer"
+          className=" text-lg cursor-pointer hover:drop-shadow-md"
         >
-          shopping
+          Shopping
         </h1>
         <Budget />
         <Remaining />

@@ -1,7 +1,7 @@
 import TaskList from './TaskList';
-import { useTasks} from '../../hook/useTasks';
+import { useTasks} from '../../hooks/useTasks';
 
-const InPorgress = ({ inPorgress, setInPorgress, handleOnDrop }: { inPorgress: string[], setInPorgress: React.Dispatch<React.SetStateAction<string[]>>, handleOnDrop: (e: React.DragEvent) => void }) => {
+const InPorgress = ({ inPorgress, setInPorgress }: { inPorgress: string[], setInPorgress: React.Dispatch<React.SetStateAction<string[]>>, handleOnDrop: (e: React.DragEvent) => void }) => {
   const { tasks, newInput, setNewInput, handleChange, add, handleKeyPress, remove, removeAll } = useTasks(inPorgress, () => setInPorgress([]));
 
   return (
@@ -16,7 +16,7 @@ const InPorgress = ({ inPorgress, setInPorgress, handleOnDrop }: { inPorgress: s
       removeAll={removeAll}
       title="In Progress"
       deleteAllTitle="Remove all" 
-      BorderColor="border-green-500"     
+      BorderColor="border-blue-600"     
     />
   );
 };

@@ -3,7 +3,7 @@ import React from 'react';
 import { AiOutlineDelete } from "react-icons/ai";
 import { IoAddSharp } from "react-icons/io5";
 import { FcDeleteDatabase } from "react-icons/fc";
-
+import { BsArrowRightCircleFill } from "react-icons/bs";
 type TaskListProps = {
   tasks: string[];
   handleChange: (e: React.ChangeEvent<HTMLInputElement>, index: number) => void;
@@ -48,11 +48,18 @@ const TaskList = ({
         >
           <input
             type="text"
-            className="mb-4 bg-gray-100 w-full pr-4 focus:outline-none h-auto"
+            className="mb-4 bg-gray-100 pr-4 focus:outline-none "
             value={text}
             onChange={(e) => handleChange(e, index)}
             onKeyDown={handleKeyPress}
           />
+          <button
+            className="absolute right-2 bottom-10"
+            onClick={() => remove(index)}
+            title="delete"
+          >
+            <BsArrowRightCircleFill size="1.3em" className="hover:text-blue-600 active:scale-95" />
+          </button>
           <button
             className="absolute right-2 bottom-2"
             onClick={() => remove(index)}
